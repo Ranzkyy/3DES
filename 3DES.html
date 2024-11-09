@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Encryption/Decryption</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>File Encryption & Decryption System Using Algorithm 3DES</h1>
+        
+        <div class="upload-section">
+            <input type="file" id="fileInput" class="file-input">
+            <label for="fileInput" class="file-label">
+                Pilih File (Gambar, Video, Audio, Teks, dll)
+            </label>
+        </div>
+
+        <div class="text-section">
+            <textarea id="textInput" placeholder="Masukkan teks yang ingin dienkripsi..." rows="4"></textarea>
+        </div>
+
+        <div class="key-section">
+            <input type="password" id="keyInput1" placeholder="Masukkan kunci 1 (6 karakter)" maxlength="6">
+            <input type="password" id="keyInput2" placeholder="Masukkan kunci 2 (6 karakter)" maxlength="6">
+            <input type="password" id="keyInput3" placeholder="Masukkan kunci 3 (6 karakter)" maxlength="6">
+        </div>
+
+        <div class="button-section">
+            <button id="encryptBtn" class="btn ui-btn encrypt"><span>Encrypt File</span></button>
+            <button id="decryptBtn" class="btn ui-btn decrypt"><span>Decrypt File</span></button>
+        </div>        
+
+        <div class="status-section">
+            <p id="fileInfo"></p>
+            <p id="status"></p>
+            <progress id="progressBar" max="100" value="0"></progress>
+        </div>
+
+        <div class="result-section">
+            <a id="downloadLink" style="display: none;" class="btn download">
+                Download File
+            </a>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
